@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margaux Astabie - Projets</title>
+    <link rel="stylesheet" href="projects.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html">
+                <img src="images/MARGAUX ASTABIE.png" alt="logo du portfolio">
+            </a> 
+        </div>
+    
+        <nav>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="home.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Section Motion Design -->
+        <section class="projects-section">
+            <h1>MOTION DESIGN</h1>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <a href="details.html" class="project-image-link">
+                        <img src="images/live.png" alt="Projet Motion Design 1" class="project-image">
+                    </a>
+                    <div class="project-title">Conception des génériques de début et de fin pour un court métrage d’horreur.</div>
+                    <a href="details.html" class="project-link">en savoir +</a>
+                </div>
+                <div class="project-card">
+                    <a href="details.html" class="project-image-link">
+                        <img src="images/ahsoka.jpg" alt="Projet Motion Design 2" class="project-image">
+                    </a>
+                    <div class="project-title">TITRE PROJET 2</div>
+                    <a href="details.html" class="project-link">en savoir +</a>
+                </div>
+                <div class="project-card">
+                    <a href="details.html" class="project-image-link">
+                        <img src="images/ahsoka.jpg" alt="Projet Motion Design 3" class="project-image">
+                    </a>
+                    <div class="project-title">TITRE PROJET 3</div>
+                    <a href="details.html" class="project-link">en savoir +</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Création Graphique -->
+        <section class="projects-section">
+            <h1>CRÉATION GRAPHIQUE</h1>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <a href="details.html" class="project-image-link">
+                        <img src="images/ahsoka.jpg" alt="Projet Graphique 1" class="project-image">
+                    </a>
+                    <div class="project-title">TITRE PROJET 4</div>
+                    <a href="details.html" class="project-link">en savoir +</a>
+                </div>
+                <div class="project-card">
+                    <a href="details.html" class="project-image-link">
+                        <img src="images/ahsoka.jpg" alt="Projet Graphique 2" class="project-image">
+                    </a>
+                    <div class="project-title">TITRE PROJET 5</div>
+                    <a href="details.html" class="project-link">en savoir +</a>
+                </div>
+                <div class="project-card">
+                    <a href="details.html" class="project-image-link">
+                        <img src="images/ahsoka.jpg" alt="Projet Graphique 3" class="project-image">
+                    </a>
+                    <div class="project-title">TITRE PROJET 6</div>
+                    <a href="details.html" class="project-link">en savoir +</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <hr style="border: 2px solid #a14cf5;">
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-left">
+            <h3>Contact</h3>
+            <p>Email : <a href="mailto:astabie22@gmail.com">astabie22@gmail.com</a></p>
+            <p>Téléphone : <a href="tel:+33609936088">+33 6 09 93 60 88</a></p>
+        </div>
+
+        <div class="footer-right"> <br>
+            <h3>Réseaux sociaux</h3>
+            <div class="social-icons">
+                <a href="https://www.tiktok.com/@mgx.vfx" target="_blank" rel="noopener">
+                    <img src="images/tiktok.jpg" alt="Tiktok">
+                </a>
+                <a href="https://www.linkedin.com/in/margaux-astabie-515123332/" target="_blank" rel="noopener">
+                    <img src="images/Black LinkedIn Icon.jpeg" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+    
+        burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos – Margaux Astabie</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="logo">
+            <a href="home.html">
+                <img src="images/MARGAUX ASTABIE.png" alt="logo du portfolio">
+            </a>
+        </div>
+
+        <nav>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="home.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== SECTION PRINCIPALE ===== -->
+    <section class="about-container">
+
+        <!-- COLONNE GAUCHE : PHOTO + HOBBIES + STAGE -->
+        <div class="left-column">
+            <img src="images/me.jpg" alt="Photo de Margaux" class="photo-cadre">
+
+            <!-- ENCADRÉ RECHERCHE STAGE -->
+            <div class="stage-box">
+                <h3>En recherche active</h3>
+                <p>Stage de 11 semaines</p>
+                <p class="stage-date">À partir du 20 avril 2026</p>
+                <p class="stage-alt">Objectif : alternance 2026-2027</p>
+            </div>
+
+            <!-- HOBBIES -->
+            <div class="hobbies">
+                <h3>Mes passions</h3>
+                <div class="hobbies-grid">
+                    <div class="hobby-item">
+                        <img src="images/moi.png" alt="Photographie">
+                        <p>Photographie</p>
+                    </div>
+                    <div class="hobby-item">
+                        <img src="images/moi.png" alt="Voyages">
+                        <p>Voyages</p>
+                    </div>
+                    <div class="hobby-item">
+                        <img src="images/moi.png" alt="Design graphique">
+                        <p>Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLONNE DROITE : TEXTE -->
+        <div class="right-column">
+            <h1>À propos de moi</h1>
+            
+            <p class="intro">
+                Basque de cœur, Bordelaise d'adoption, j'ai choisi le BUT MMI pour me former à la <strong>communication digitale</strong>. Pas vraiment le parcours qu'on imaginait pour moi après un bac plutôt orienté géopolitique et langues.
+                <br><br>
+                En terminale, j'ai eu un déclic. <br>J'aime <strong>créer</strong>. <br> Des visuels, des animations, du contenu qui raconte quelque chose. Et aussi fédérer des communautés en ligne. Bref, je savais ce que je voulais faire.
+                <br><br>
+                <strong>After Effects</strong> et <strong>Photoshop</strong> sont vite devenus mes outils du quotidien. J'ai commencé à poster mes créations sur <strong>TikTok</strong> pour tester, apprendre, et voir ce qui marche (ou pas).
+                <br><br>
+                En MMI, j'ai découvert <strong>Figma</strong> et <strong>Illustrator</strong> qui ont vraiment changé ma façon de travailler. Et même le <strong>code</strong> (HTML/CSS).
+                <br><br>
+                Mon but est de rejoindre une équipe créative où je pourrai continuer à progresser en <strong>création de contenus</strong> et <strong>animation graphique</strong>.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="projets.html" class="btn-primary">Voir mes projets</a>
+                <a href="contact.html" class="btn-secondary">Me contacter</a>
+            </div>
+        </div>
+
+    </section>
+
+    <hr style="border: 2px solid #a14cf5;">
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-left">
+            <h3>Contact</h3>
+            <p>Email : <a href="mailto:astabie22@gmail.com">astabie22@gmail.com</a></p>
+            <p>Téléphone : <a href="tel:+33609936088">+33 6 09 93 60 88</a></p>
+        </div>
+
+        <div class="footer-right"> <br>
+            <h3>Réseaux sociaux</h3>
+            <div class="social-icons">
+                <a href="https://www.tiktok.com/@mgx.vfx" target="_blank" rel="noopener">
+                    <img src="images/tiktok.jpg" alt="Tiktok">
+                </a>
+                <a href="https://www.linkedin.com/in/margaux-astabie-515123332/" target="_blank" rel="noopener">
+                    <img src="images/Black LinkedIn Icon.jpeg" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+    
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

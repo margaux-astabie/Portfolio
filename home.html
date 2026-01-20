@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margaux Astabie</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html">
+                <img src="images/MARGAUX ASTABIE.png" alt="logo du portfolio">
+            </a> 
+        </div>
+    
+        <nav>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="home.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <div class="elements">
+        <div class="elements-left">
+            <h1>Salut !</h1>
+            <h3>Moi c'est Margaux </h3>
+                <p><br>Je suis passionnée par tout ce qui touche au graphisme et au motion design.
+                <br>J’aime imaginer, créer, animer, et surtout donner du sens à ce que je fais.
+                <br>En ce moment, je suis à la recherche d’un stage / d’une alternance 
+                <br>pour continuer à progresser, apprendre de nouvelles choses et 
+                <br>collaborer sur des projets créatifs ;) !</p>
+                <a href="about.html" class="about">en savoir +</a> <br>
+                <a href="#" class="cv-link">Télécharger mon CV</a>
+            
+        </div>
+    
+        <div class="elements-right">
+
+            <img src="images/test.png" alt="ma photo" class="photo">
+        </div>
+    </div>
+
+    <section class="marquee">
+        <div class="marquee-inner">
+        <span>showreel&nbsp; showreel&nbsp; showreel&nbsp; showreel&nbsp; showreel&nbsp;</span>
+        <span>showreel&nbsp; showreel&nbsp; showreel&nbsp;showreel&nbsp; showreel&nbsp;</span>
+        </div>
+    </section>
+    
+    
+    <section id="showreel">
+        <h1>Mon travail </h1>
+        <p>en 1 minute</p>
+        <video controls autoplay muted loop>
+            <source src="video/choso_kamo_2.00x_2160x2160_prob-1.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video> <br>
+        <a href="projets.html" class="cv-link">en voir +</a>
+    </section>
+    <hr style="border: 2px solid #a14cf5;">
+    <footer>
+        <div class="footer-left">
+            <h3>Contact</h3>
+            <p>Email : <a href="mailto:astabie22@gmail.com">astabie22@gmail.com</a></p>
+            <p>Téléphone : <a href="tel:+33609936088">+33 6 09 93 60 88</a></p>
+        </div>
+
+        <div class="footer-right">
+            <h3>Réseaux sociaux</h3>
+            <div class="social-icons">
+                <a href="https://www.tiktok.com/@mgx.vfx" target="_blank" rel="noopener">
+                    <img src="images/tiktok.jpg" alt="Tiktok">
+                </a>
+                <a href="https://www.linkedin.com/in/margaux-astabie-515123332/" target="_blank" rel="noopener">
+                    <img src="images/Black LinkedIn Icon.jpeg" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+    
+        burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
