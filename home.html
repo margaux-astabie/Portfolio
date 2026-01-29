@@ -33,24 +33,26 @@
     
     
     <div class="elements">
-        <div class="elements-left">
-            <h1>Salut !</h1>
-            <h3>Moi c'est Margaux </h3>
-                <p><br>Je suis passionnée par tout ce qui touche au graphisme et au motion design.
-                <br>J’aime imaginer, créer, animer, et surtout donner du sens à ce que je fais.
-                <br>En ce moment, je suis à la recherche d’un stage / d’une alternance 
+        <div class="elements-left slide-in-left">
+            <h1 class="stagger-1">Salut !</h1>
+            <h3 class="stagger-2">Moi c'est Margaux </h3>
+                <p class="stagger-3"><br>Je suis passionnée par tout ce qui touche au graphisme et au motion design.
+                <br>J'aime imaginer, créer, animer, et surtout donner du sens à ce que je fais.
+                <br>En ce moment, je suis à la recherche d'un stage / d'une alternance 
                 <br>pour continuer à progresser, apprendre de nouvelles choses et 
                 <br>collaborer sur des projets créatifs ;) !</p>
-                <a href="about.html" class="about">en savoir +</a> <br>
-                <a href="#" class="cv-link">Télécharger mon CV</a>
-            
+                <div class="stagger-4">
+                    <a href="about.html" class="about">en savoir +</a> <br>
+                    <a href="#" class="cv-link">Télécharger mon CV</a>
+                </div>
         </div>
     
-        <div class="elements-right">
-
+        <div class="elements-right slide-in-right">
             <img src="images/test.png" alt="ma photo" class="photo">
         </div>
     </div>
+
+    
 
     <section class="marquee">
         <div class="marquee-inner">
@@ -61,16 +63,16 @@
     
     
     <section id="showreel">
-        <h1>Mon travail </h1>
-        <p>en 1 minute</p>
-        <video controls autoplay muted loop>
+        <h1 class="fade-in">Mon travail </h1>
+        <p class="fade-in stagger-1">en 1 minute</p>
+        <video controls autoplay muted loop class="scale-in stagger-2">
             <source src="video/choso_kamo_2.00x_2160x2160_prob-1.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la vidéo.
         </video> <br>
-        <a href="projets.html" class="cv-link">en voir +</a>
+        <a href="projets.html" class="cv-link fade-in stagger-3">en voir +</a>
     </section>
-    <hr style="border: 2px solid #a14cf5;">
-    <footer>
+    <hr style="border: 2px solid #a14cf5;" class="fade-in">
+    <footer class="fade-in">
         <div class="footer-left">
             <h3>Contact</h3>
             <p>Email : <a href="mailto:astabie22@gmail.com">astabie22@gmail.com</a></p>
@@ -89,13 +91,50 @@
             </div>
         </div>
     </footer>
+    
     <script>
+        // Menu Burger
         const burger = document.querySelector('.burger');
         const navLinks = document.querySelector('.nav-links');
     
         burger.addEventListener('click', () => {
-        burger.classList.toggle('active');
-        navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Animations au scroll
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observer tous les éléments avec les classes d'animation
+        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Animation du texte au chargement de la page
+        window.addEventListener('load', () => {
+            const heroElements = document.querySelectorAll('.elements-left > *');
+            heroElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('visible');
+                }, index * 100);
+            });
+            
+            // Animation de la photo
+            const photo = document.querySelector('.elements-right');
+            setTimeout(() => {
+                photo.classList.add('visible');
+            }, 300);
         });
     </script>
 </body>

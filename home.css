@@ -22,6 +22,68 @@ body {
   color: white;
   font-family: 'Coolvetica', Arial, sans-serif;
   line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* ===== ANIMATIONS AU SCROLL ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.stagger-1 {
+  transition-delay: 0.1s;
+}
+
+.stagger-2 {
+  transition-delay: 0.2s;
+}
+
+.stagger-3 {
+  transition-delay: 0.3s;
+}
+
+.stagger-4 {
+  transition-delay: 0.4s;
 }
 
 /* ===== HEADER ===== */
@@ -37,6 +99,18 @@ header {
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .logo img {
@@ -159,6 +233,11 @@ nav a:hover {
   border-radius: 12px;
   z-index: -1;
   opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.elements-right:hover::before {
+  opacity: 0.5;
 }
 
 .elements-right img.photo {
@@ -167,12 +246,15 @@ nav a:hover {
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(161, 76, 245, 0.3);
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .elements-right img.photo:hover {
   transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(161, 76, 245, 0.5);
 }
+
+
 
 /* ===== MARQUEE ===== */
 .marquee {
@@ -231,7 +313,7 @@ nav a:hover {
   margin-top: 20px;
   box-shadow: 0 10px 40px rgba(161, 76, 245, 0.3);
   border: 2px solid rgba(161, 76, 245, 0.2);
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 #showreel video:hover {
@@ -255,6 +337,7 @@ footer h3 {
 footer a {
   color: white;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 footer a:hover {
@@ -269,11 +352,12 @@ footer a:hover {
 .social-icons img {
   width: 30px;
   height: 30px;
-  transition: .3s;
+  transition: transform .3s, filter .3s;
 }
 
 .social-icons img:hover {
-  transform: scale(1.2);
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 0 10px rgba(161, 76, 245, 0.6));
 }
 
   /* ===== MENU BURGER ===== */
