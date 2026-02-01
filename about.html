@@ -36,9 +36,13 @@
     <!-- ===== SECTION PRINCIPALE ===== -->
     <section class="about-container">
 
-        <!-- COLONNE GAUCHE : PHOTO + HOBBIES + STAGE -->
+        <!-- COLONNE GAUCHE : PHOTO + STAGE -->
         <div class="left-column">
-            <img src="images/about.png" alt="Photo de Margaux" class="photo-cadre">
+            <div class="photo-3d-wrapper">
+                <div class="photo-3d">
+                    <img src="images/about.png" alt="Photo de Margaux" class="photo-cadre">
+                </div>
+            </div>
 
             <!-- ENCADRÉ RECHERCHE STAGE -->
             <div class="stage-box">
@@ -46,25 +50,6 @@
                 <p>Stage de 12 semaines</p>
                 <p class="stage-date">À partir du 20 avril 2026</p>
                 <p class="stage-alt">Objectif : alternance 2026-2027</p>
-            </div>
-
-            <!-- HOBBIES -->
-            <div class="hobbies">
-                <h3>Mes passions</h3>
-                <div class="hobbies-grid">
-                    <div class="hobby-item">
-                        <img src="images/moi.png" alt="Photographie">
-                        <p>Photographie</p>
-                    </div>
-                    <div class="hobby-item">
-                        <img src="images/moi.png" alt="Voyages">
-                        <p>Voyages</p>
-                    </div>
-                    <div class="hobby-item">
-                        <img src="images/moi.png" alt="Design graphique">
-                        <p>Design</p>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -122,6 +107,28 @@
         burger.addEventListener('click', () => {
             burger.classList.toggle('active');
             navLinks.classList.toggle('active');
+        });
+
+        // Animation 3D de l'image au mouvement de la souris
+        const photo3D = document.querySelector('.photo-3d');
+        const photoWrapper = document.querySelector('.photo-3d-wrapper');
+
+        photoWrapper.addEventListener('mousemove', (e) => {
+            const rect = photoWrapper.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 15;
+            const rotateY = (centerX - x) / 15;
+            
+            photo3D.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+        });
+
+        photoWrapper.addEventListener('mouseleave', () => {
+            photo3D.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
         });
     </script>
 </body>
