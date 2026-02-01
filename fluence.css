@@ -609,6 +609,32 @@ footer a:hover {
         gap: 20px;
     }
 
+    /* LIENS DU PROJET MOBILE */
+@media (max-width: 768px) {
+    .project-links {
+        grid-template-columns: 1fr; /* une seule colonne sur mobile */
+        gap: 20px; /* espace plus petit */
+    }
+
+    .project-link {
+        padding: 20px; /* réduire padding pour tenir sur écran étroit */
+        gap: 15px; /* réduire l’espace entre icône et texte */
+    }
+
+    .link-icon {
+        font-size: 36px; /* réduire la taille de l’icône */
+    }
+
+    .link-content h4 {
+        font-size: 16px; /* texte légèrement plus petit */
+    }
+
+    .link-content p {
+        font-size: 14px;
+    }
+}
+
+
     /* RÉSULTATS */
     .result-card {
         padding: 25px;
